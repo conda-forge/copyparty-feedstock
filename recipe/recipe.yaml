@@ -1,6 +1,6 @@
 context:
   name: copyparty
-  version: "1.18.5"
+  version: "1.18.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 49f07f8b318a1120f554e0aa3bbd45d54b457a5bbd3e8f9b835d65ad6bba39da
+  sha256: f136106ec36f3b91dcab3a473c039b4f2b999afe5c3a5a9edb5d217a4cfb0bd2
 
 build:
   script: python -m pip install . -vv
@@ -27,16 +27,16 @@ requirements:
 tests:
   - python:
       imports:
-      - copyparty
-      - copyparty.bos
-      - copyparty.res
-      - copyparty.stolen
-      - copyparty.stolen.dnslib
-      - copyparty.stolen.ifaddr
-      - copyparty.web
-      - copyparty.web.a
-      - copyparty.web.dd
-      - copyparty.web.deps
+        - copyparty
+        - copyparty.bos
+        - copyparty.res
+        - copyparty.stolen
+        - copyparty.stolen.dnslib
+        - copyparty.stolen.ifaddr
+        - copyparty.web
+        - copyparty.web.a
+        - copyparty.web.dd
+        - copyparty.web.deps
       pip_check: true
       python_version: ${{ python_min }}.*
 
