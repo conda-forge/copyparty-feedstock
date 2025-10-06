@@ -1,6 +1,6 @@
 context:
   name: copyparty
-  version: "1.19.15"
+  version: "1.19.16"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 4bf61c00b9ea438cd44c86dfa90c08bb34822902b0f694177f7b5027e2be5437
+  sha256: ea29aafb872ab2698aa272dc79f81bf56a0ee6ff7c43ced1b2bd35a1abe212fb
 
 build:
   script: python -m pip install . -vv
